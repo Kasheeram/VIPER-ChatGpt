@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		890BA9372BD4F24800E77079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BA9362BD4F24800E77079 /* AppDelegate.swift */; };
 		890BA9392BD4F24800E77079 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BA9382BD4F24800E77079 /* SceneDelegate.swift */; };
-		890BA93B2BD4F24800E77079 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BA93A2BD4F24800E77079 /* ViewController.swift */; };
-		890BA93E2BD4F24800E77079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890BA93C2BD4F24800E77079 /* Main.storyboard */; };
 		890BA9402BD4F24A00E77079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 890BA93F2BD4F24A00E77079 /* Assets.xcassets */; };
 		890BA9432BD4F24A00E77079 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890BA9412BD4F24A00E77079 /* LaunchScreen.storyboard */; };
+		890BA9532BD4F46A00E77079 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BA9522BD4F46A00E77079 /* Protocols.swift */; };
+		890BA9552BD4F49100E77079 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BA9542BD4F49100E77079 /* User.swift */; };
+		890BA9572BD4F50800E77079 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BA9562BD4F50800E77079 /* UserListViewController.swift */; };
+		890BA9592BD4F5D200E77079 /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BA9582BD4F5D200E77079 /* UserListPresenter.swift */; };
+		890BA95B2BD4F75700E77079 /* UserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BA95A2BD4F75700E77079 /* UserListInteractor.swift */; };
+		890BA95D2BD4F84A00E77079 /* UserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BA95C2BD4F84A00E77079 /* UserListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		890BA9332BD4F24800E77079 /* VIPER-ChatGpt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER-ChatGpt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		890BA9362BD4F24800E77079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		890BA9382BD4F24800E77079 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		890BA93A2BD4F24800E77079 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		890BA93D2BD4F24800E77079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		890BA93F2BD4F24A00E77079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		890BA9422BD4F24A00E77079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		890BA9442BD4F24A00E77079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		890BA9522BD4F46A00E77079 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		890BA9542BD4F49100E77079 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		890BA9562BD4F50800E77079 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		890BA9582BD4F5D200E77079 /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
+		890BA95A2BD4F75700E77079 /* UserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractor.swift; sourceTree = "<group>"; };
+		890BA95C2BD4F84A00E77079 /* UserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,83 @@
 		890BA9352BD4F24800E77079 /* VIPER-ChatGpt */ = {
 			isa = PBXGroup;
 			children = (
+				890BA9502BD4F3F500E77079 /* Entity */,
+				890BA94A2BD4F32C00E77079 /* Modules */,
 				890BA9362BD4F24800E77079 /* AppDelegate.swift */,
 				890BA9382BD4F24800E77079 /* SceneDelegate.swift */,
-				890BA93A2BD4F24800E77079 /* ViewController.swift */,
-				890BA93C2BD4F24800E77079 /* Main.storyboard */,
 				890BA93F2BD4F24A00E77079 /* Assets.xcassets */,
 				890BA9412BD4F24A00E77079 /* LaunchScreen.storyboard */,
 				890BA9442BD4F24A00E77079 /* Info.plist */,
 			);
 			path = "VIPER-ChatGpt";
+			sourceTree = "<group>";
+		};
+		890BA94A2BD4F32C00E77079 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				890BA94B2BD4F33F00E77079 /* UserList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		890BA94B2BD4F33F00E77079 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				890BA9512BD4F40A00E77079 /* Protocols */,
+				890BA94C2BD4F34B00E77079 /* View */,
+				890BA94D2BD4F35200E77079 /* Interactor */,
+				890BA94E2BD4F3DB00E77079 /* Presenter */,
+				890BA94F2BD4F3E600E77079 /* Router */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		890BA94C2BD4F34B00E77079 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				890BA9562BD4F50800E77079 /* UserListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		890BA94D2BD4F35200E77079 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				890BA95A2BD4F75700E77079 /* UserListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		890BA94E2BD4F3DB00E77079 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				890BA9582BD4F5D200E77079 /* UserListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		890BA94F2BD4F3E600E77079 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				890BA95C2BD4F84A00E77079 /* UserListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		890BA9502BD4F3F500E77079 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				890BA9542BD4F49100E77079 /* User.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		890BA9512BD4F40A00E77079 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				890BA9522BD4F46A00E77079 /* Protocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +203,6 @@
 			files = (
 				890BA9432BD4F24A00E77079 /* LaunchScreen.storyboard in Resources */,
 				890BA9402BD4F24A00E77079 /* Assets.xcassets in Resources */,
-				890BA93E2BD4F24800E77079 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +213,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				890BA93B2BD4F24800E77079 /* ViewController.swift in Sources */,
+				890BA9572BD4F50800E77079 /* UserListViewController.swift in Sources */,
+				890BA9592BD4F5D200E77079 /* UserListPresenter.swift in Sources */,
+				890BA9552BD4F49100E77079 /* User.swift in Sources */,
+				890BA95D2BD4F84A00E77079 /* UserListRouter.swift in Sources */,
+				890BA95B2BD4F75700E77079 /* UserListInteractor.swift in Sources */,
+				890BA9532BD4F46A00E77079 /* Protocols.swift in Sources */,
 				890BA9372BD4F24800E77079 /* AppDelegate.swift in Sources */,
 				890BA9392BD4F24800E77079 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +227,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		890BA93C2BD4F24800E77079 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				890BA93D2BD4F24800E77079 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		890BA9412BD4F24A00E77079 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +368,6 @@
 				INFOPLIST_FILE = "VIPER-ChatGpt/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,7 +394,6 @@
 				INFOPLIST_FILE = "VIPER-ChatGpt/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
