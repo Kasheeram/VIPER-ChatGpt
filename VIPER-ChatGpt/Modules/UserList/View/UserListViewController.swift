@@ -72,6 +72,11 @@ class UserListViewController: UIViewController, UserListViewProtocol, UITableVie
         cell.textLabel?.text = users[indexPath.row].name
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedUser = users[indexPath.row]
+        presenter.didSelectUser(selectedUser)
+    }
 
     
 }

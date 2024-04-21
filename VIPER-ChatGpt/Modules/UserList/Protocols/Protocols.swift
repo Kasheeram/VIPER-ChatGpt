@@ -19,7 +19,7 @@ protocol UserListViewProtocol: AnyObject {
 protocol UserListPresenterProtocol: AnyObject {
     func viewDidLoad()
     func interactorDidFetchUsers(with result: Result<[User], Error>)
-//    func didSelectUser(_ user: User)
+    func didSelectUser(_ user: User)
 }
 
 // Interactor
@@ -32,7 +32,7 @@ protocol UserListInteractorProtocol: AnyObject {
 // Router
 protocol UserListRouterProtocol: AnyObject {
     static func createUserListModule() -> UserListViewController
-//    func navigateToUserDetails(with user: User)
+    func navigateToUserDetails(with user: User)
     
 }
 

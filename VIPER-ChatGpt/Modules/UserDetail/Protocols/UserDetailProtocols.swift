@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+
+// Router
+protocol UserDetailRouterProtocol: AnyObject {
+    static func createUserDetailModule(with user: User) -> UserDetailController
+}

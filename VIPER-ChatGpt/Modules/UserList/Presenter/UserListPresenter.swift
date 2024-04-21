@@ -9,7 +9,7 @@ import Foundation
 
 
 class UserListPresenter: UserListPresenterProtocol {
-    
+   
     weak var view: UserListViewProtocol?
     var interactor: UserListInteractorProtocol!
     var router: UserListRouterProtocol
@@ -34,9 +34,9 @@ class UserListPresenter: UserListPresenterProtocol {
         }
     }
     
-//    func didSelectUser(_ user: User) {
-////        router.navigateToUserDetails(with: user)
-//    }
+    func didSelectUser(_ user: User) {
+        router.navigateToUserDetails(with: user)
+    }
     
     
     

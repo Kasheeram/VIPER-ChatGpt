@@ -17,6 +17,9 @@
 		890BA9592BD4F5D200E77079 /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BA9582BD4F5D200E77079 /* UserListPresenter.swift */; };
 		890BA95B2BD4F75700E77079 /* UserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BA95A2BD4F75700E77079 /* UserListInteractor.swift */; };
 		890BA95D2BD4F84A00E77079 /* UserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890BA95C2BD4F84A00E77079 /* UserListRouter.swift */; };
+		897E80C82BD532D500BE5456 /* UserDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E80C72BD532D500BE5456 /* UserDetailProtocols.swift */; };
+		897E80CB2BD5334900BE5456 /* UserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E80CA2BD5334900BE5456 /* UserDetailController.swift */; };
+		897E80CE2BD5337B00BE5456 /* UserDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E80CD2BD5337B00BE5456 /* UserDetailsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		890BA9582BD4F5D200E77079 /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
 		890BA95A2BD4F75700E77079 /* UserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractor.swift; sourceTree = "<group>"; };
 		890BA95C2BD4F84A00E77079 /* UserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRouter.swift; sourceTree = "<group>"; };
+		897E80C72BD532D500BE5456 /* UserDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailProtocols.swift; sourceTree = "<group>"; };
+		897E80CA2BD5334900BE5456 /* UserDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailController.swift; sourceTree = "<group>"; };
+		897E80CD2BD5337B00BE5456 /* UserDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 		890BA94A2BD4F32C00E77079 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				897E80C52BD532AA00BE5456 /* UserDetail */,
 				890BA94B2BD4F33F00E77079 /* UserList */,
 			);
 			path = Modules;
@@ -141,6 +148,40 @@
 				890BA9522BD4F46A00E77079 /* Protocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		897E80C52BD532AA00BE5456 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				897E80CC2BD5336600BE5456 /* Router */,
+				897E80C92BD5333000BE5456 /* View */,
+				897E80C62BD532B700BE5456 /* Protocols */,
+			);
+			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		897E80C62BD532B700BE5456 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				897E80C72BD532D500BE5456 /* UserDetailProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		897E80C92BD5333000BE5456 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				897E80CA2BD5334900BE5456 /* UserDetailController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		897E80CC2BD5336600BE5456 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				897E80CD2BD5337B00BE5456 /* UserDetailsRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +257,9 @@
 				890BA9572BD4F50800E77079 /* UserListViewController.swift in Sources */,
 				890BA9592BD4F5D200E77079 /* UserListPresenter.swift in Sources */,
 				890BA9552BD4F49100E77079 /* User.swift in Sources */,
+				897E80CB2BD5334900BE5456 /* UserDetailController.swift in Sources */,
+				897E80C82BD532D500BE5456 /* UserDetailProtocols.swift in Sources */,
+				897E80CE2BD5337B00BE5456 /* UserDetailsRouter.swift in Sources */,
 				890BA95D2BD4F84A00E77079 /* UserListRouter.swift in Sources */,
 				890BA95B2BD4F75700E77079 /* UserListInteractor.swift in Sources */,
 				890BA9532BD4F46A00E77079 /* Protocols.swift in Sources */,
