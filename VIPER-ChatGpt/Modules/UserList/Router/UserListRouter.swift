@@ -9,28 +9,29 @@ import Foundation
 import UIKit
 
 // Entry point
-
 class UserListRouter: UserListRouterProtocol {
-    weak var viewController: UIViewController?
-    
-    init(viewController: UIViewController) {
-        self.viewController = viewController
-    }
-    
-    static func createUserListModule() -> UserListViewController {
-        
+   
+    static func createUserListModule() -> UIViewController {
         let view = UserListViewController()
-        let interactor = UserListInteractor()
-        let presenter = UserListPresenter(view: view, interactor: interactor, router: UserListRouter(viewController: view))
+        let interactor: UserListInteractorInputProtocol = UserListInteractor()
+        let presenter: UserListPresenterProtocol & UserListInteractorOutputProtocol = UserListPresenter()
+        let router: UserListRouterProtocol = UserListRouter()
         
         view.presenter = presenter
         interactor.presenter = presenter
+        presenter.view = view
+        presenter.interactor = interactor
+        presenter.router = router
+        
         return view
     }
     
-    func navigateToUserDetails(with user: User) {
+    func navigateToUserDetails(from view: UserListViewProtocol, with user: User) {
         let userDetailsViewController = UserDetailsRouter.createUserDetailModule(with: user)
-        viewController?.navigationController?.pushViewController(userDetailsViewController, animated: true)
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(userDetailsViewController, animated: true)
+        }
+        
     }
     
 }

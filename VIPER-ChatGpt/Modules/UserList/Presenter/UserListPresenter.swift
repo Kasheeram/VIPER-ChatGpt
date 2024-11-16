@@ -8,36 +8,27 @@
 import Foundation
 
 
-class UserListPresenter: UserListPresenterProtocol {
+class UserListPresenter: UserListPresenterProtocol, UserListInteractorOutputProtocol {
    
     weak var view: UserListViewProtocol?
-    var interactor: UserListInteractorProtocol!
-    var router: UserListRouterProtocol
-    
-    init(view: UserListViewProtocol, interactor: UserListInteractorProtocol, router: UserListRouterProtocol) {
-        self.view = view
-        self.interactor = interactor
-        self.router = router
-    }
-    
+    var interactor: UserListInteractorInputProtocol?
+    var router: UserListRouterProtocol?
     
     func viewDidLoad() {
-        interactor.fetchUsers()
+        interactor?.fetchUsers()
     }
     
-    func interactorDidFetchUsers(with result: Result<[User], Error>) {
-        switch result {
-        case .success(let users):
-            view?.showUsers(users)
-        case .failure(let error):
-            view?.showError(message: error.localizedDescription)
-        }
+    func usersFetchedSuccessfully(users: [User]) {
+        view?.showUsers(users)
     }
     
-    func didSelectUser(_ user: User) {
-        router.navigateToUserDetails(with: user)
+    func usersFetchingFailed(with error: FetchError) {
+        view?.showError(message: error.localizedDescription)
     }
     
-    
+    func showUserDetails(_ user: User) {
+        guard let view = view else { return }
+        router?.navigateToUserDetails(from: view, with: user)
+    }
     
 }

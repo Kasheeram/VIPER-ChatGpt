@@ -9,7 +9,7 @@ import UIKit
 
 class UserListViewController: UIViewController, UserListViewProtocol, UITableViewDelegate, UITableViewDataSource {
     
-    var presenter: UserListPresenterProtocol!
+    var presenter: UserListPresenterProtocol?
     
     private let tableView: UITableView = {
         let table = UITableView()
@@ -29,7 +29,7 @@ class UserListViewController: UIViewController, UserListViewProtocol, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad()
+        presenter?.viewDidLoad()
         view.addSubview(label)
         view.backgroundColor = .systemBackground
         view.addSubview(tableView)
@@ -75,8 +75,7 @@ class UserListViewController: UIViewController, UserListViewProtocol, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedUser = users[indexPath.row]
-        presenter.didSelectUser(selectedUser)
+        presenter?.showUserDetails(selectedUser)
     }
-
     
 }

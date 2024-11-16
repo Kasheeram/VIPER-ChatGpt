@@ -84,8 +84,8 @@
 		890BA94A2BD4F32C00E77079 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				897E80C52BD532AA00BE5456 /* UserDetail */,
 				890BA94B2BD4F33F00E77079 /* UserList */,
+				897E80C52BD532AA00BE5456 /* UserDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
